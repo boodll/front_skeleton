@@ -4,6 +4,7 @@
 //팀원이 clone 하면 package.json 만 올라간다
 //package.json에 명시된 모듈들이 다운로드 된다. 팀장과 동일 환경이 된다.
 
+//서버 구동
 >npx nodemon app.js
 
 
@@ -13,6 +14,9 @@ front_end
 >cd skeleton_front
 >npm install
 >npm install axios bootstrap react-router react-router-dom styled-component
+
+//front 
+>npm run dev
 
 public/js/a.js
 -component 에서 import 해서 사용되는 js 가 아니라
