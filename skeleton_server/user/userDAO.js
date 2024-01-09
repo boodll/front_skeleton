@@ -5,7 +5,7 @@ const sql = {
   //이메일 중복을 체크하기 위한 sql 문이다.
   //? 는 프로그램 데이터가 들어갈 자리!
   checkId: 'SELECT * FROM user WHERE email = ?',
-  signup: 'TNSERT INTO user (name, email, password) VALUES (?, ?, ?)',
+  signup: 'INSERT INTO user (name, email, password) VALUES (?, ?, ?)',
 }
 
 //DAO - DBMS (데이터베이스 연동) 처리
