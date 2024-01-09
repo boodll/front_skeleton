@@ -14,6 +14,15 @@ front_end
 >npm install
 >npm install axios bootstrap react-router react-router-dom styled-component
 
+public/js/a.js
+-component 에서 import 해서 사용되는 js 가 아니라
+-html 파일에 <script> 로 이용되는 파일..
+
+vendor - 특별한 의미의 단어가 아니라.
+bootstrap template 을 제공하는 개인/ 기관등에서 만든 무언가
+
+------------------------------------------------------------------------
+github
 //개별 github repository 에 push
 >git add .
 >git commit -m "aaaa"
