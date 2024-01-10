@@ -17,7 +17,7 @@ const SignUp = () => {
   const signup = useCallback(async (e) => {
     e.preventDefault()
 //서버 연동
-    const resp = await axios.post('http://local8000/users/signup', data)
+    const resp = await axios.post('http://localhost8000/users/signup', data)
     if (resp.data.status === 500) window.alert('사용자가 존재 합니다.')
 //첫 화면으로 화면 전환
     else navigate('/')
@@ -26,7 +26,7 @@ const SignUp = () => {
     <main id="main">
 
       {/* <!-- ======= Intro Single ======= --> */}
-      <section classNameName="intro-single">
+      <section className="intro-single">
         <div className="container">
           <div className="row">
             <div className="col-md-12 col-lg-8">
