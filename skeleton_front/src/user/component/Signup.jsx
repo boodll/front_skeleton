@@ -3,24 +3,24 @@ import { useNavigate } from "react-router";
 import axios from "axios";
 
 const SignUp = () => {
-  //url path조정하려고 useNavi씀
-  const navigate = useNavigate();
+  //url path조정하려고 useNavi 사용
+  const navigate = useNavigate()
 
   //constrolled component를 위해서
-  const [data, setData] = useState({ name: "", email: "", password: "" });
+  const [data, setData] = useState({ name: "", email: "", password: "" })
   //유저 입력 변경 이벤트..
   const changeData = useCallback((e) => {
-    setData((data) => ({ ...data, [e.target.name]: e.target.value }));
-  }, []);
+    setData((data) => ({ ...data, [e.target.name]: e.target.value }))
+  }, [])
   //submit 버튼 클릭 이벤트
   const signup = useCallback(
     async (e) => {
-      e.preventDefault();
+      e.preventDefault()
       //서버연동
-      const resp = await axios.post("http://localhost:8000/users/signup", data);
-      if (resp.data.status === 500) window.alert("사용자가 존재합니다");
+      const resp = await axios.post("http://localhost:8000/users/signup", data)
+      if (resp.data.status === 500) window.alert("사용자가 존재합니다")
       //첫 화면으로 화면 전환
-      else navigate("/");
+      else navigate("/")
     },
     [data, navigate]
   );
@@ -371,7 +371,7 @@ const SignUp = () => {
       </section>
       {/* <!-- End About Section--> */}
     </main>
-  );
-};
+  )
+}
 
-export default SignUp;
+export default SignUp
