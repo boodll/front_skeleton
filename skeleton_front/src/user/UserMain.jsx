@@ -1,5 +1,5 @@
 import { Route, Routes } from "react-router";
-// import Signup from './component/Signup'
+import Signup from './component/Signup'
 
 const UserMain = () =>{
   return (
