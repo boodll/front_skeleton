@@ -17,8 +17,24 @@ router.post('/insert', function(req, res, next)  {
   })
 })
 
-router.get('/board/:id', function(req, res ,next) {
-  
+router.get('/board/:id', function(req, res, next){
+  const id = req.params.id
+  boardDAO.board(id, (resp) => {
+    res.json(resp)
+  })
 })
 
+router.post('/delete/:id', function(req, res, next){
+  const id = req.params.id 
+  console.log('111111111', id)
+  boardDAO.delete(id, (resp) => {
+    res.json(resp)
+  })
+})
+router.post('/update', function(req, res, next){
+  const data = req.body
+  boardDAO.update(data, (resp) => {
+    res.json(resp)
+  })
+})
 module.exports = router
