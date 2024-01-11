@@ -5,16 +5,16 @@ import axios from "axios";
 const SignIn = () => {
   const navigate = useNavigate();
 
-  const [data, setData] = useState({ email: "", password: "" });
+  const [data, setData] = useState({ email: "", password: "" })
   const changeData = useCallback((e) => {
-    setData((data) => ({ ...data, [e.target.name]: e.target.value }));
-  }, []);
+    setData((data) => ({ ...data, [e.target.name]: e.target.value }))
+  }, [])
   const login = useCallback(
     async (e) => {
-      e.preventDefault();
-      const resp = await axios.post("http://localhost:8000/users/signin", data);
-      if (resp.data.status === 500) window.alert(resp.data.message);
-      else navigate("/");
+      e.preventDefault()
+      const resp = await axios.post("http://localhost:8000/users/signin", data)
+      if (resp.data.status === 500) window.alert(resp.data.message)
+      else navigate("/")
     },
     [data, navigate]
   );

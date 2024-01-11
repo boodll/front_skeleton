@@ -4,6 +4,7 @@ import Header from "./home/component/Header";
 import Footer from "./home/component/Footer";
 import HomeMain from "./home/HomeMain";
 import UserMain from "./user/UserMain"
+import BoardMain from "./board/BoardMain";
 
 const App = ()=>{
   return(
@@ -16,7 +17,8 @@ const App = ()=>{
       즉 XXXMain 만 이곳에 등록.. XXX 업무에 의한 화면 라우팅은 XXXMain 에 명시! */}
       <Routes>
         <Route path="/" element={<HomeMain />} />
-        <Route path="/user/*" element={<UserMain/>}/> 
+        <Route path="/user/*" element={<UserMain/>}/>
+        <Route path="/board/*" element={<BoardMain/>}/>
       </Routes>
       <Footer />
     </div>
