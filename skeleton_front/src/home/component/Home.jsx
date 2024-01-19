@@ -8,7 +8,7 @@ const Home = () => {
       - html 주석 부분 수정
       - html 은 single tag 를 허용, jsx 는 허용불가( jsx 는 xml 문법이다.)
       - a -> Link 태그로
-      -className -> classNameName 태그로
+      -class -> className 태그로
       -style : inline style, jsx - javascript 표현식으로
       -이미지 경로 public 의 images 로 바꿔야한다.(맞는 경로를 지정해야 에러가 발생하지 않음.)
       */}
